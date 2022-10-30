@@ -1,0 +1,32 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Data {
+  id                              String        @id @default(auto()) @map("_id") @db.ObjectId
+  gpsLatitude                     Float?
+  gpsLongitude                    Float?
+  horizontalAccuracy              Int?
+  messageType                     String?
+  age                             Int?
+  trackingMode                    String?
+  batteryLevel                    Int?
+  batteryStatus                   String?
+  ackToken                        Int?
+  rawPositionType                 String?
+  periodicPosition                Boolean?
+  temperatureMeasure              Float?
+  sosFlag                         Int?
+  appState                        Int?
+  dynamicMotionState              String?
+  onDemand                        Boolean?
+  payload                         Json?
+}

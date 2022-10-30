@@ -1,0 +1,29 @@
+GET http://localhost:3001/data
+
+###
+
+POST http://localhost:3001/data
+Content-Type: application/json
+
+{
+    "gpsLatitude": 234329.2344,
+    "gpsLongitude": 123234.1232,
+    "horizontalAccuracy": null,
+    "messageType": null,
+    "age": null,
+    "trackingMode": null,
+    "batteryLevel": null,
+    "batteryStatus": null,
+    "ackToken": null,
+    "rawPositionType": null,
+    "periodicPosition": null,
+    "temperatureMeasure": null,
+    "sosFlag": null,
+    "appState": null,
+    "dynamicMotionState": null,
+    "onDemand": null,
+    "payload": {
+        "val":2,
+        "qte":3
+    }
+}
